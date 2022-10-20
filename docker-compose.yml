@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dashboard-template:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+     - ./:/usr/src/app
+    command: sh -c "cd app && yarn start"
+    ports:
+     - "3000:3000"
