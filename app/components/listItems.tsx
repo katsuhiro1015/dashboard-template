@@ -4,10 +4,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PeopleIcon from '@mui/icons-material/People';
+import SecurityIcon from '@mui/icons-material/Security'
+import SettingsIcon from '@mui/icons-material/Settings';
+import BackupTableIcon from '@mui/icons-material/BackupTable';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
+import ConstructionIcon from '@mui/icons-material/Construction';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export const mainListItems = (
@@ -18,29 +19,29 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton component="a" href="./Infrastructure">
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <ConstructionIcon />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="環境構築" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton component="a" href="./Backup">
       <ListItemIcon>
-        <PeopleIcon />
+        <BackupTableIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="バックアップ" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton component="a" href="./Security">
       <ListItemIcon>
-        <BarChartIcon />
+        <SecurityIcon />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
+      <ListItemText primary="セキュリティ" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton component="a" href="./Setting">
       <ListItemIcon>
-        <LayersIcon />
+        <SettingsIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="設定" />
     </ListItemButton>
   </React.Fragment>
 );

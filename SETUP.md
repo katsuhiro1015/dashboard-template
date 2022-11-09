@@ -28,5 +28,5 @@ services:
 ## docker-compose実行
 
 ```bash
-docker-compose run --rm dashboard-template sh -c "npm install -g create-react-app && create-react-app app --template typescript"
+docker-compose run --rm dashboard-template sh -c "npx create-next-app@latest --typescript"
 ```

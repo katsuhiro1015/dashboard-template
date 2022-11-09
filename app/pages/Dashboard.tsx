@@ -6,9 +6,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+import Chart from '../components/Chart';
+import Deposits from '../components/Deposits';
+import Orders from '../components/Orders';
 
 import Header from '../templates/Header'
 import Navigation from '../templates/Navigation'
@@ -21,16 +21,13 @@ const mdTheme = createTheme();
 
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
 
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <Header />
-        <Navigation />
+        <Header open={open} setOpen={setOpen}/>
+        <Navigation open={open} setOpen={setOpen}/>
 
         <Box
           component="main"

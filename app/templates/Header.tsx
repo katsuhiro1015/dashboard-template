@@ -35,7 +35,8 @@ interface AppBarProps extends MuiAppBarProps {
   
 
 export default function Header(props: any) {
-    const [open, setOpen] = React.useState(true);
+    const open = props.open;
+    const setOpen = props.setOpen;
     const toggleDrawer = () => {
       setOpen(!open);
     };
